@@ -34,3 +34,9 @@ section#contact{
     max-width: calc(33.333% - 20px); /* Limite la largeur maximale */
     box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur */
 }
+
+/* img vpn */
+
+.img-margin-bottom {
+    margin-bottom: 10px;
+}
