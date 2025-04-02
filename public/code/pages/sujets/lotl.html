@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living Off The Land</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/app.css" rel="stylesheet" />
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <link href="../../css/app.css" rel="stylesheet" />
 </head>
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="../assets/img/navbar-logo.webp" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="../../assets/img/navbar-logo.webp" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -43,6 +43,75 @@
             <div class="masthead-heading text-uppercase">Sujet : Living Off The Land</div>
         </div>
     </header>
+
+    <!-- Corps de la page -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Qu'est-ce que Living Off The Land ?</h2>
+                <p class="text-muted">Living Off The Land (LOTL) est une technique utilisée par les attaquants pour exploiter des outils et des fonctionnalités légitimes du système afin de mener des attaques sans déclencher d'alertes.</p>
+            </div>
+
+            <!-- Explication avec image -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h3>Comment cela fonctionne ?</h3>
+                    <p>Les attaquants utilisent des outils natifs du système d'exploitation, comme PowerShell ou WMI, pour éviter d'utiliser des logiciels malveillants détectables. Cela rend leurs activités plus difficiles à identifier.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="../../assets/img/sujet/lotl.webp" alt="Illustration LOTL" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- Exemples d'outils utilisés -->
+            <div class="text-center mb-5">
+                <h3 class="section-heading text-uppercase">Exemples d'outils utilisés</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">PowerShell</h5>
+                            <p class="card-text">Un outil puissant pour l'administration système, souvent détourné pour exécuter des scripts malveillants.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">WMI</h5>
+                            <p class="card-text">Windows Management Instrumentation est utilisé pour collecter des informations ou exécuter des commandes à distance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">CertUtil</h5>
+                            <p class="card-text">Un outil légitime pour gérer les certificats, souvent utilisé pour télécharger des fichiers malveillants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prévention -->
+            <div class="row align-items-center mt-5">
+                <div class="col-md-6 text-center">
+                    <img src="../../assets/img/sujet/prevention-lotl.webp" alt="Prévention LOTL" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3>Comment se protéger ?</h3>
+                    <ul>
+                        <li>Surveillez l'utilisation des outils natifs du système.</li>
+                        <li>Implémentez des politiques de sécurité strictes.</li>
+                        <li>Utilisez des solutions de détection des comportements anormaux.</li>
+                        <li>Formez les utilisateurs à reconnaître les signes d'attaques.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer-->
     <footer class="footer py-4">
