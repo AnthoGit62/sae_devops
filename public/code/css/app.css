@@ -19,3 +19,18 @@ section#contact{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+/* pour les blocs de 3 articles */
+
+.threecards {
+    display: flex;
+    justify-content: space-between; /* Ajoute un espace égal entre les cards */
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+    gap: 20px; /* Ajoute un espacement entre les cards */
+}
+
+.threecards .portfolio-item {
+    flex: 1 1 calc(33.333% - 20px); /* Chaque card occupe 1/3 de la largeur avec un espace */
+    max-width: calc(33.333% - 20px); /* Limite la largeur maximale */
+    box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur */
+}
