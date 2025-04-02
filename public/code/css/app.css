@@ -20,19 +20,22 @@ section#contact{
     padding-bottom: 2rem;
 }
 
-/* pour les blocs de 3 articles */
+/* Pour les articles */
 
-.threecards {
-    display: flex;
-    justify-content: space-between; /* Ajoute un espace égal entre les cards */
-    flex-wrap: nowrap; /* Permet de passer à la ligne si l'espace est insuffisant */
-    gap: 20px; /* Ajoute un espacement entre les cards */
+#portfolio .portfolio-item .portfolio-link {
+    min-height: 330px;
 }
 
-.threecards .portfolio-item {
-    flex: 1 1 calc(33.333% - 20px); /* Chaque card occupe 1/3 de la largeur avec un espace */
-    max-width: calc(33.333% - 20px); /* Limite la largeur maximale */
-    box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur */
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+/* pour les blocs de 3 articles */
+
+.row {
+    flex-wrap: nowrap;
 }
 
 /* img vpn */
@@ -40,3 +43,4 @@ section#contact{
 .img-margin-bottom {
     margin-bottom: 10px;
 }
+
