@@ -25,7 +25,7 @@ section#contact{
 .threecards {
     display: flex;
     justify-content: space-between; /* Ajoute un espace égal entre les cards */
-    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+    flex-wrap: nowrap; /* Permet de passer à la ligne si l'espace est insuffisant */
     gap: 20px; /* Ajoute un espacement entre les cards */
 }
 
