@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A propos</title>
+    <title>Man In The Middle</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -36,91 +36,83 @@
             </div>
         </div>
     </nav>
-
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
             <div class="masthead-subheading">Bienvenue dans l'air de CyberSécurité</div> 
-            <div class="masthead-heading text-uppercase">Gestion du VPN</div>
+            <div class="masthead-heading text-uppercase">Sujet : Man In The Middle</div>
         </div>
     </header>
 
-    <!-- Nouvelle section avec texte et logo -->
+    <!-- Corps de la page -->
     <section class="py-5">
         <div class="container">
-            <div class="text-center">
-                <br><br><h2 class="section-heading text-uppercase">Comment nous avons géré le VPN</h2> <br><br>
+            <!-- Introduction -->
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Qu'est-ce qu'une attaque Man In The Middle ?</h2>
+                <p class="text-muted">Une attaque "Man In The Middle" (MITM) est une méthode où un attaquant intercepte et manipule les communications entre deux parties sans qu'elles s'en rendent compte.</p>
             </div>
-            <div class="row align-items-center">
+
+            <!-- Explication avec image -->
+            <div class="row align-items-center mb-5">
                 <div class="col-md-6">
-                    <h2>Installation du fichier de configuration openVPN</h2>
+                    <h3>Comment cela fonctionne ?</h3>
+                    <p>Dans une attaque MITM, l'attaquant se positionne entre deux parties (par exemple, un utilisateur et un serveur) pour intercepter, modifier ou voler des données sensibles comme des mots de passe ou des informations bancaires.</p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="/public/code/assets/img/vpn/1_vpn.webp" class="img-fluid">
+                    <img src="https://via.placeholder.com/500x300" alt="Illustration MITM" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- Types d'attaques -->
+            <div class="text-center mb-5">
+                <h3 class="section-heading text-uppercase">Types d'attaques MITM</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Spoofing DNS</h5>
+                            <p class="card-text">L'attaquant redirige les utilisateurs vers un site malveillant en modifiant les enregistrements DNS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Attaque Wi-Fi</h5>
+                            <p class="card-text">L'attaquant utilise un réseau Wi-Fi non sécurisé pour intercepter les données des utilisateurs connectés.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Session Hijacking</h5>
+                            <p class="card-text">L'attaquant vole une session utilisateur active pour accéder à des informations sensibles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prévention -->
+            <div class="row align-items-center mt-5">
+                <div class="col-md-6 text-center">
+                    <img src="https://via.placeholder.com/500x300" alt="Prévention MITM" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3>Comment se protéger ?</h3>
+                    <ul>
+                        <li>Utilisez des connexions sécurisées (HTTPS).</li>
+                        <li>Évitez les réseaux Wi-Fi publics non sécurisés.</li>
+                        <li>Activez l'authentification à deux facteurs (2FA).</li>
+                        <li>Utilisez des VPN pour chiffrer vos communications.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nouvelle section inversée -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase Logo" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <h2>Mise en place du VPN</h2>
-                    <p>Pour la mise en place du VPN, ça dépend de votre manière de travailler, si vous préférez un container, une machine virtuelle ou directement sur votre PC.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nouvelle section avec texte et logo -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Pour les machines virtuelles et les containers</h2>
-                    <p>Vous avez plusieurs solutions, soit vous mettez votre openVPN sur votre machine et vous donnez accès en brige à votre réseau hôte à vos containers ou à vos VMs. Si vous préférez, vous pouvez créer des volumes sur docker et des dossiers partagés entre votre VM et votre hôte pour partager le fichier de config openVPN et le lancé directement sur votre machine de travail. Sachez que des outils comme exegol propose des solution pour faciliter la mise en place des VPNs</p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="https://skillicons.dev/icons?i=githubactions" alt="Firebase Logo" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
- 
-    <!-- Nouvelle section inversée -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img src="https://skillicons.dev/icons?i=aaa" alt="Firebase Logo" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <h2>Pratique des rooms</h2>
-                    <p>Une fois le site terminé à 80% nous avons pratiqués les rooms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Nouvelle section inversée -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Finitions du site</h2>
-                    <p>Pour finir on à ajouter chaque pages de rooms détaillés, ensuite les vidéos en accords avec les rooms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">
