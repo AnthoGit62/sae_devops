@@ -20,6 +20,18 @@ section#contact{
     padding-bottom: 2rem;
 }
 
+/* Pour les articles */
+
+.portfolio-link {
+    min-height: 330px;
+}
+
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
 /* pour les blocs de 3 articles */
 
 .threecards {
@@ -40,3 +52,4 @@ section#contact{
 .img-margin-bottom {
     margin-bottom: 10px;
 }
+
