@@ -28,6 +28,9 @@ section#contact{
     display: block;
 }
 
+.portfolio-block-img {
+    display: flex;
+}
 .img-fluid {
     height: 100%;
     object-fit: cover;
