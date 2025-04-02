@@ -24,6 +24,8 @@ section#contact{
 
 #portfolio .portfolio-item .portfolio-link {
     min-height: 330px;
+    margin:0 auto;
+    display: block;
 }
 
 .img-fluid {
@@ -35,7 +37,7 @@ section#contact{
 /* pour les blocs de 3 articles */
 
 .row {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 /* img vpn */
