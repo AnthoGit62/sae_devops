@@ -53,7 +53,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../../assets/img/rooms/windows_fundamentals_part_1.svg" alt="..." />
+                                <img class="img-fluid" src="../../../assets/img/rooms/dns_in_details.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">DNS in Details</div>
@@ -67,7 +67,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../../assets/img/rooms/windows_fundamentals_part_2.svg" alt="..." />
+                                <img class="img-fluid" src="../../../assets/img/rooms/http_in_detail.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">HTTP in Details</div>
@@ -81,7 +81,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../../assets/img/rooms/windows_fundamentals_part_3.svg" alt="..." />
+                                <img class="img-fluid" src="../../../assets/img/rooms/how_websites_work.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">How Websites Work</div>
@@ -95,7 +95,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../../assets/img/rooms/active_directory_basics.webp" alt="..." />
+                                <img class="img-fluid" src="../../../assets/img/rooms/putting_it_all_together.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Putting it all together</div>
@@ -132,8 +132,8 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">DNS in Details</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/windows_fundamentals_part_1.svg" alt="..." />
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/dnsindetail" target="_blank">Lien vers la box</a></p>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/dns_in_details.webp" alt="..." />
                                         <h2>Description:</h2>
                                         <p>Découvrez comment fonctionne le DNS et comment il vous aide à accéder aux services Internet.</p>
                                         <h4>Contexte:</h4>                            
@@ -142,9 +142,9 @@
                                         <p>À travers la room DNS in Detail de TryHackMe, nous avons pu comprendre en détail le fonctionnement du DNS, ainsi que la manière de l'utiliser et de l'exploiter à travers des outils simples.</p>
                                         <h1>Video de présentation:</h1>
                                         <center style="padding-bottom: 2rem;">
-                                        <video width="320" height="240" controls>
-                                            <source style="" src="../../../assets/vid/DNS_in_Detail.mp4" type="video/mp4">
-                                        </video>
+                                            <video width="320" height="240" controls>
+                                                <source src="../../../assets/vid/DNS_in_Detail.mp4" type="video/mp4">
+                                            </video>
                                         </center>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -169,18 +169,22 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">HTTP in Details</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/windows_fundamentals_part_2.svg" alt="..." />
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/httpindetail" target="_blank">Lien vers la box</a></p>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/http_in_detail.webp" alt="..." />
                                         <h2>Description:</h2>
-                                        <p>Blablabla</p>
+                                        <p>Découvrez dans cette room comment fonctionne en interne le protocole HTTP et HTTPS. Quelle méthodes utilise-t-il? Comment font votre navigateur et le serveur web pour se comprendre? Que signifient tout ces codes que l'ont voit sur notre navigateur?</p>
                                         <h4>Contexte:</h4>                            
-                                        <p>Blablabla</p>
+                                        <p>Cette room s'inscrit dans le cadre d'une découverte du protocole HTTP dans la connexion entre client et serveur. Découvir ce fonctionnement permet de mieux appréhender le web et comprendre ce qu'il ce passe derrière notre écran. Elle permet de construire des outils pour pouvoir potentiellement venir créer vos propres connexions et metytre en place votre serveur.</p>
                                         <h1>Ce qu'on a compris:</h1>
-                                        <p>Blablabla</p>
+                                        <p><b>HTTP</b> et <b>HTTPS</b> sont tous les deux des protocoles permettant une connexion, sécurisée ou non, à un serveur web. <b>HTTP</b> fonctionne grâce à un système de requête et de réponses. Un client va envoyer une requête de création, suppression, mise à jour... à un serveur qui va répondre accordement à ce qu'il connait. Après réception de la requête, le serveur renverra un <b>code</b> (404, 503, 201) en fonction du résultat de cette requête (a-t-elle fonctionné, y a-t-il eu un problème interne?). Ces codes permettent à un utilisateur d'avoir des informations sur le résultat de la demande qu'il à formulé. Pour savoir sous quel format un navigateur doit afficher une réponse, la requête est accompagné de <b>headers</b> qui vont indiquer quel type de contenu il doit afficher, de quelle taille il est... la même chose intervient du côté du serrveur. Il se peut que le serveur ne soit pas compatible avec un navigateur spécifique et donc refuser une connexion venant de ce navigateur en fonction des informations contenues dans le header de la requête.
+                                        
+                                        Une importante partie du protocole HTTP, consiste de cookies. Ces cookies servent à stocker les données de l'utilisateur pour un traitement plus rapide des requêtes. Il s'inscrivent sur le navigateur du client via le header <b>set-cookies</b> en provenance du serveur et son consulatables dans les outils pour développeur de chaque navigateur.</p>
                                         <h1>Video de présentation:</h1>
-                                        <video width="320" height="240" controls>
-                                            <source src="../../../assets/vid/nggyu.mp4" type="video/mp4">
-                                        </video>
+                                        <center style="padding-bottom: 2rem;">
+                                            <video width="320" height="240" controls>
+                                                <source src="../../../assets/vid/HTTP_IN_DETAILS.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fermer le projet
@@ -204,18 +208,20 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">How Websites Work</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/windows_fundamentals_part_3.svg" alt="..." />
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/howwebsiteswork" target="_blank">Lien vers la box</a></p>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/how_websites_work.webp" alt="..." />
                                         <h2>Description:</h2>
-                                        <p>Blablabla</p>
+                                        <p>Découvrez dans cette room comment fonctionne les site web que vous utilisez au quotidien. Comment se fait-il qu'il dispose d'effets comme cela? Pourquoi celui-ci fait ceci? Découvrez tout en regardant la vidéo!</p>
                                         <h4>Contexte:</h4>                            
-                                        <p>Blablabla</p>
+                                        <p>Cette room s'inscrit dans un contexte de compréhension approfondie du service web qui nous entoure. Comment fonctionne-il, par quel moyen? Cette room vous permet de poser les bases de la compréhension des sites web et de potentiellement vous engager dans un processus d'apprentissage approfondie de la création de site web.</p>
                                         <h1>Ce qu'on a compris:</h1>
-                                        <p>Blablabla</p>
+                                        <p>Un site web est codé en <b>HTML</b>, c'est ce qui permet de mettre sa structure en place, d'y placer du texte, des titres, des images, des vidéos, des listes... Virtuellement tout! Mais un site web uniquement configuré sur de l'HTML n'est pas agréable à l'oeil. Ce qui va rendre un site joli, c'est le <b>CSS</b>. Le CSS permet de customiser l'apparence du rendu de votre code HTML, il lui donne des couleurs, agrandi des images, permet de l'afficher sur toutes tailles d'écran... Il est indispensable à un site web fonctionnel. Souvent, on va accompagner l'HTML et le CSS par du <b>JavaScript</b>. Le JavaScript va agir en arrière plan de votre site. Réaliser des calculs, stocker des données... C'est lui qui va rendre votre site web interactif! Il n'est pas obligatoire mais donnera un aspect plus personnel à votre site auprès de votre client.</p>
                                         <h1>Video de présentation:</h1>
-                                        <video width="320" height="240" controls>
-                                            <source src="../../../assets/vid/nggyu.mp4" type="video/mp4">
-                                        </video>
+                                        <center style="padding-bottom: 2rem;">
+                                            <video width="320" height="240" controls>
+                                                <source src="../../../assets/vid/how_websites_work.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fermer le projet
@@ -239,18 +245,20 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Putting it all together</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/active_directory_basics.webp" alt="..." />
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/puttingitalltogether" target="_blank">Lien vers la box</a></p>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/putting_it_all_together.webp" alt="..." />
                                         <h2>Description:</h2>
-                                        <p>Blablabla</p>
+                                        <p>Découvrez comment sont interconnecté tous le modules vu précedemment. Ce module et cette vidéo vous explique l'interconnectivité entre les différents modules et tous le processus suivi par une requête sur un serveur web pour afficher du contenu sur un navigateur client peut importe la taille du site web, son contenu, sa sécurité... tout est traité!</p>
                                         <h4>Contexte:</h4>                            
-                                        <p>Blablabla</p>
+                                        <p>Nous découvrons ensemble le fonctionnement des différents modules traitant la requête dans un objectif de comprendre comment fonctionne le web que l'on utilise au quotidien et pour apprendre à le maitriser.</p>
                                         <h1>Ce qu'on a compris:</h1>
-                                        <p>Blablabla</p>
+                                        <p>Une requête faites depuis un navigateur passe par de nomnbreuses étapes avant d'atteindre le serveur. Elle doit d'abord obtenir l'adresse IP du serveur cible grâce à un <b>DNS</b>  avant de le rejoindre. Selon la taille de l'organisation en charge du site web, il peut-être nécessaire qu'un <b>Load Balancer</b> soit mis en place afin de distribuer les connexions au sur différents serveur et éviter une surcharge puis un dysfonctionnement. Il est recommandé pour les gestionnaires de serveurs web, de mettre en place un <b>firewall</b> pour protéger leur service de requête malveillantes. Un <b>firewall</b> va analyser le trafic en temps réel afin de détecter les requête anormale ou les tentatives d'attaques communes et les bloquer pour protéger le serveur web.</p>
                                         <h1>Video de présentation:</h1>
-                                        <video width="320" height="240" controls>
-                                            <source src="../../../assets/vid/nggyu.mp4" type="video/mp4">
-                                        </video>
+                                        <center style="padding-bottom: 2rem;">    
+                                            <video width="320" height="240" controls>
+                                                <source src="../../../assets/vid/putting_it_all_together.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fermer le projet
