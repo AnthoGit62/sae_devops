@@ -116,7 +116,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <h1>Room TryHackMe - Moniker Link (CVE-2024-21413)</h1>
-
+                                <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_1.png"/>
                                 <h2>Contexte</h2>
                                 <p>
                                     Cette room TryHackMe est centrée sur l’exploitation de la faille critique CVE-2024-21413. Cette vulnérabilité affecte Microsoft Outlook et permet à un attaquant de forcer l’ouverture d’un fichier distant via un lien spécial (moniker), contournant la Protected View. Le but de la room est de comprendre le fonctionnement des monikers, comment les détourner, et de capturer les identifiants de la victime via une attaque SMB.
@@ -181,8 +181,8 @@
                                     Lors de la connexion SMB, Responder capture les informations d’identification :
                                 </p>
                                 <pre>
-                                    [SMB] NTLMv2-SSP Client   : ::ffff:10.10.97.238
-                                    [SMB] NTLMv2-SSP Username : THM-MONIKERLINK\tryhackme
+                            [SMB] NTLMv2-SSP Client   : ::ffff:10.10.97.238
+                                [SMB] NTLMv2-SSP Username : THM-MONIKERLINK\tryhackme
                                     [SMB] NTLMv2-SSP Hash     : tryhackme::THM-MONIKERLINK:86a73f...
                                 </pre>
                                 <img src="https://example.com/image-responder.png" alt="Capture SMB via Responder" style="width:60%; margin: 1em 0;" />
