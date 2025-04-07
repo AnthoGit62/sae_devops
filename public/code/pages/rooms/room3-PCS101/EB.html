@@ -117,6 +117,7 @@
                             <div class="col-lg-8">
                                 <h1>Room TryHackMe - Moniker Link (CVE-2024-21413)</h1>
                                 <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/EB/Screenshot_1.png"/>
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/monikerlink" target="_blank">Lien vers la box</a></p>
                                 <h2>Contexte</h2>
                                 <p>
                                     Cette room TryHackMe est centrée sur l’exploitation de la faille critique CVE-2024-21413. Cette vulnérabilité affecte Microsoft Outlook et permet à un attaquant de forcer l’ouverture d’un fichier distant via un lien spécial (moniker), contournant la Protected View. Le but de la room est de comprendre le fonctionnement des monikers, comment les détourner, et de capturer les identifiants de la victime via une attaque SMB.
@@ -221,19 +222,34 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Metasploit: Introduction</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/metasploit_introduction.webp" alt="..." />
-                                        <h2>Description:</h2>
-                                        <p>Blablabla</p>
-                                        <h4>Contexte:</h4>                            
-                                        <p>Blablabla</p>
-                                        <h1>Ce qu'on a compris:</h1>
-                                        <p>Blablabla</p>
-                                        <h1>Video de présentation:</h1>
-                                        <video width="320" height="240" controls>
-                                            <source src="../../../assets/vid/nggyu.mp4" type="video/mp4">
-                                        </video>
+                                    <h1>Metasploit Introduction - TryHackMe</h1>
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/metasploitintro" target="_blank">Lien vers la box</a></p>
+                                    <h2>Contexte et Objectifs</h2>
+                                    <p>
+                                        La box <strong>Metasploit Introduction</strong> est conçue pour initier les utilisateurs à l'utilisation de Metasploit, un framework puissant pour l'exploitation des vulnérabilités dans des systèmes. Le but est de comprendre comment Metasploit peut être utilisé pour identifier des failles de sécurité et effectuer des exploits sur des cibles spécifiques. La machine virtuelle contient plusieurs services vulnérables que l'on doit analyser et exploiter en utilisant Metasploit. Cela inclut la découverte de services ouverts, la recherche de vulnérabilités correspondantes et l'exploitation de celles-ci.
+                                    </p>
+
+                                    <h3>Objectifs principaux :</h3>
+                                    <ul>
+                                        <li><strong>Scanner et identifier les services vulnérables</strong> : L'objectif est d'analyser le système cible pour trouver des failles exploitables.</li>
+                                        <li><strong>Utiliser Metasploit pour l'exploitation</strong> : Vous devez ensuite choisir un exploit correspondant à la vulnérabilité trouvée et l'exécuter via Metasploit.</li>
+                                        <li><strong>Obtenir un shell distant</strong> : Une fois que l'exploit réussit, vous serez en mesure de récupérer un accès à la machine cible (en général sous forme de shell distant).</li>
+                                        <li><strong>Prendre le contrôle de la machine cible</strong> : Enfin, vous devez utiliser votre accès pour obtenir des informations supplémentaires, comme un fichier de drapeau (flag) ou des informations sensibles.</li>
+                                    </ul>
+
+                                    <h2>Ce que j'ai compris des principaux points abordés</h2>
+                                    <ul>
+                                        <li><strong>Découverte des services vulnérables</strong> : L'exercice commence souvent par un scan de la machine cible avec des outils comme <code>nmap</code>, ce qui permet d'identifier les services actifs (par exemple, HTTP, SSH, FTP) et leurs versions. Ces informations sont cruciales pour déterminer les vulnérabilités spécifiques à exploiter.</li>
+                                        <li><strong>Sélection et utilisation des exploits avec Metasploit</strong> : Après avoir identifié un service vulnérable, vous utilisez Metasploit pour rechercher un exploit qui correspond à cette vulnérabilité. Metasploit offre un large éventail de modules d'exploits prédéfinis, ce qui simplifie le processus d'exploitation.</li>
+                                        <li><strong>Exploitation et accès à la machine cible</strong> : Une fois l'exploit choisi et exécuté, Metasploit lance un payload qui vous permet d'obtenir un accès à la machine cible, généralement sous forme de shell. À ce moment-là, vous pouvez commencer à exécuter des commandes pour prendre le contrôle complet de la machine et récupérer des informations sensibles.</li>
+                                    </ul>
+
+                                    <p>
+                                        En résumé, ce projet est une bonne introduction à l’utilisation de Metasploit dans un contexte de penetration testing, en vous familiarisant avec les étapes du processus de découverte, d'exploitation et de prise de contrôle d’une machine cible vulnérable.
+                                    </p>
+                                    <div style="text-align: center;">
+                                        <iframe width="560" height="315" src="https://youtu.be/6x--H31-lfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fermer le projet
@@ -256,21 +272,35 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Blue</h2>
-                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/paths" target="_blank">Lien vers la box</a></p>
-                                    <img class="img-fluid d-block mx-auto" src="../../../assets/img/rooms/blue.webp" alt="..." />
-                                        <h2>Description:</h2>
-                                        <p>Blablabla</p>
-                                        <h4>Contexte:</h4>                            
-                                        <p>Blablabla</p>
-                                        <h1>Ce qu'on a compris:</h1>
-                                        <p>Blablabla</p>
-                                        <h1>Video de présentation:</h1>
-                                        <center style="padding-bottom: 2rem;">
-                                            <video width="320" height="240" controls>
-                                                <source src="../../../assets/vid/nggyu.mp4" type="video/mp4">
-                                            </video>
-                                        </center>
+                                    <h1>Blue - TryHackMe</h1>
+                                    <p class="item-intro text-muted"><a href="https://tryhackme.com/room/blue" target="_blank">Lien vers la box</a></p>
+                                    <h2>Contexte et Objectifs</h2>
+                                    <p>
+                                        La box <strong>Blue</strong> de TryHackMe est un challenge d'initiation à l'exploitation de vulnérabilités sur une machine Windows vulnérable. L'objectif principal de cette machine est de comprendre et d'exploiter des failles typiques présentes sur des systèmes Windows, en particulier des erreurs de configuration dans les services accessibles à distance. La machine vous permettra de tester vos compétences en reconnaissance de services vulnérables et en escalade de privilèges.
+                                    </p>
+
+                                    <h3>Objectifs principaux :</h3>
+                                    <ul>
+                                        <li><strong>Scanner la machine cible</strong> : Utiliser des outils comme <code>nmap</code> pour découvrir les services actifs sur la machine et les versions des logiciels qui y sont installés.</li>
+                                        <li><strong>Exploitation des vulnérabilités</strong> : Identifier les failles de sécurité présentes sur les services découverts et les exploiter pour obtenir un accès à la machine. Cela pourrait inclure des vulnérabilités dans des services comme SMB, RDP ou encore des applications web.</li>
+                                        <li><strong>Escalade de privilèges</strong> : Une fois l'accès initial obtenu, vous devrez utiliser des techniques d'escalade de privilèges pour obtenir un contrôle total de la machine, en recherchant des configurations incorrectes ou des failles permettant de s'élever en tant qu'administrateur.</li>
+                                        <li><strong>Récupérer le flag</strong> : Après avoir obtenu un accès complet à la machine, il est nécessaire de localiser et d'extraire les fichiers de drapeau (flag) pour valider l'exploitation réussie de la machine.</li>
+                                    </ul>
+
+                                    <h2>Ce que j'ai compris des principaux points abordés</h2>
+                                    <ul>
+                                        <li><strong>Reconnaissance des services vulnérables</strong> : Comme pour toute exploitation, l'une des premières étapes est de découvrir les services ouverts sur la machine cible. Ici, l'utilisation de <code>nmap</code> ou d'autres outils de reconnaissance est essentielle pour localiser les services vulnérables. Il faut aussi prêter attention aux versions des logiciels, car elles peuvent déterminer les vulnérabilités exploitées.</li>
+                                        <li><strong>Exploitation des vulnérabilités spécifiques à Windows</strong> : Les vulnérabilités dans les services Windows, comme les partages SMB, peuvent être utilisées pour obtenir un accès à la machine. Par exemple, des vulnérabilités comme <code>MS17-010</code> (EternalBlue) sont des cibles communes dans ce type de machine.</li>
+                                        <li><strong>Escalade de privilèges dans Windows</strong> : Une fois qu'un accès limité est obtenu, l'étape suivante est de rechercher des moyens d'augmenter les privilèges. Sur Windows, cela peut inclure l'exploitation de failles comme des permissions incorrectes sur des fichiers, des failles de configuration dans les services ou des vulnérabilités dans des outils administratifs.</li>
+                                        <li><strong>Obtention du flag</strong> : L'objectif final est de récupérer les fichiers de drapeau (flag) qui prouvent que vous avez réussi à pénétrer et à prendre le contrôle de la machine. Cela nécessite de naviguer dans le système après avoir escaladé les privilèges.</li>
+                                    </ul>
+
+                                    <p>
+                                        En résumé, la box <strong>Blue</strong> permet de découvrir les étapes classiques d'un test de pénétration sur une machine Windows vulnérable. Elle met l'accent sur la reconnaissance des services, l'exploitation de failles, et l'escalade de privilèges pour obtenir un accès complet au système cible.
+                                    </p>
+                                    <div style="text-align: center;">
+                                        <iframe width="560" height="315" src="https://youtu.be/7ryD1Z-wxi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fermer le projet
